@@ -5,7 +5,6 @@ rm(list = ls())
 
 # 경로 설정
 setwd("C:/Users/jason/Desktop/STAT242/Assignment1")
-
 cpi <- read.table("CPI.txt", header=T)
 
 # Data Structure
@@ -23,12 +22,16 @@ sapply(cpi, var)
 # 표준편차
 sapply(cpi, sd)
 
+summary(cpi); sapply(cpi, var); sapply(cpi, sd);
+
 # Range 범위
 range(cpi$Food)
 range(cpi$Housing)
 range(cpi$Transportation)
 range(cpi$Education)
 range(cpi$Recreation)
+
+range(cpi$Food); range(cpi$Housing); range(cpi$Transportation); range(cpi$Education); range(cpi$Recreation);
 
 # 줄기 잎 그림
 stem(cpi$Food)
@@ -48,10 +51,22 @@ hist(cpi$Recreation)
 # boxplot(Food~Region, data=cpi)
 # boxplot(Housing~Region, data=cpi)
 
-# 분할표
-
-
 # 상관계수
+head(cpi$Food)
+
+# Make a DataFrame
+food <- data.frame(cpi$Food)
+housing <- data.frame(cpi$Housing)
+transportation <- data.frame(cpi$Transportation)
+education <- data.frame(cpi$Education)
+recreation <- data.frame(cpi$Recreation)
+
+# Data Frame Matrix
+cpi_frame <- data.frame(food, housing, transportation, education, recreation)
+head(cpi_frame)
+
+# Corrleation of all Variables
+cor(cpi_frame)
 
 
 # 회귀
