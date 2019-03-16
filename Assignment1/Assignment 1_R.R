@@ -78,12 +78,18 @@ boxplot(recreation, xlab = 'recreation')
 # plot
 plot(cpi)
 
+plot(cpi$Recreation, cpi$Transportation)
+plot(cpi$Housing, cpi$Food)
+plot(cpi$Transportation, cpi$Food)
+plot(cpi$Recreation, cpi$Food)
+
 plot(food)
 plot(housing)
 plot(transportation)
 plot(education)
 plot(recreation)
 
+# Regression Analysis -> NO
+# Why? P-value is too big.
 
 
-# È¸±Í
