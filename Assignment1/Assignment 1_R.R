@@ -68,5 +68,22 @@ head(cpi_frame)
 # Corrleation of all Variables
 cor(cpi_frame)
 
+# Box plot
+boxplot(food, xlab='food')
+boxplot(housing, xlab = 'housing')
+boxplot(transportation, xlab = 'transportation')
+boxplot(education, xlab = 'education')
+boxplot(recreation, xlab = 'recreation')
+
+# plot
+plot(cpi)
+
+plot(food)
+plot(housing)
+plot(transportation)
+plot(education)
+plot(recreation)
+
+
 
 # È¸±Í
