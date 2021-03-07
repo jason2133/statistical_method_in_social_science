@@ -1,0 +1,10 @@
+one.way <- read.table("~/Dropbox/teaching/201901_ST242/r-code/fuel.txt", header=T)
+attach(one.way)
+Trt <- factor(trt)
+one.way.anova <- aov(y ~ Trt)
+summary.aov(one.way.anova)
+model.tables(one.way.anova)
+Tukey <- TukeyHSD(one.way.anova)
+print(Tukey,3)
+plot(Tukey)
+

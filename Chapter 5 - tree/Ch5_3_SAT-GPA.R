@@ -1,0 +1,6 @@
+SAT <- read.table("~/Dropbox/teaching/201901_ST242/r-code/data/SAT.txt",header=T)
+round(cor(SAT),3)
+pairs(SAT[,c(3,1,2)])
+attach(SAT)
+gpa.model <- lm(gpa ~ verbal+math)
+summary(gpa.model)
